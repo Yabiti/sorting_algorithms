@@ -9,3 +9,7 @@ mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 print("socket has been created")
 
+try:
+	mySocket.bind((HOST, PORT))
+except socket.error msg as:
+	print("binding has failed.Error code as: + str(msg[0]) + 'message' + (msg[1])")
