@@ -13,3 +13,6 @@ try:
 	mySocket.bind((HOST, PORT))
 except socket.error msg as:
 	print("binding has failed.Error code as: + str(msg[0]) + 'message' + (msg[1])")
+	sys.exit()
+mySocket.listen(10)
+print("socket is now litsening")
