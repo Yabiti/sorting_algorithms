@@ -16,3 +16,7 @@ except socket.error msg as:
 	sys.exit()
 mySocket.listen(10)
 print("socket is now listening")
+
+while 1:
+address = mySocket.accept()
+print('connected with' address[0] + ":" + str(address[1]))
